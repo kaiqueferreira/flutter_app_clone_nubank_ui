@@ -1,11 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app_clone_nubank_ui/pages/home/widgets/menu_app.dart';
 import 'package:flutter_app_clone_nubank_ui/pages/home/widgets/my_app_bar.dart';
-import 'package:flutter_app_clone_nubank_ui/pages/home/widgets/my_dots_app.dart';
-import 'package:flutter_app_clone_nubank_ui/pages/home/widgets/page_view_app.dart';
 
-import 'widgets/bottom_menu.dart';
+import 'file:///E:/Users/Artur/FlutterCloneUI/flutter_app_clone_nubank_ui/lib/pages/home/widgets/menu/menu_app.dart';
+import 'file:///E:/Users/Artur/FlutterCloneUI/flutter_app_clone_nubank_ui/lib/pages/home/widgets/pageview/my_dots_app.dart';
+import 'file:///E:/Users/Artur/FlutterCloneUI/flutter_app_clone_nubank_ui/lib/pages/home/widgets/pageview/page_view_app.dart';
+
+import 'widgets/bottom_menu/bottom_menu.dart';
 
 class HomePage extends StatefulWidget {
   @override

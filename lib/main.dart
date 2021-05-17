@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_app_clone_nubank_ui/pages/home/home_page.dart';
+import 'package:flutter_app_clone_nubank_ui/pages/home/splash/splash_page.dart';
 
 void main() {
-  SystemChrome.setSystemUIOverlayStyle(
-      SystemUiOverlayStyle(statusBarBrightness: Brightness.dark));
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarBrightness: Brightness.dark,
+      statusBarColor: Colors.transparent, // Like a NoItemBar
+      systemNavigationBarColor: Colors.purple[800] // Like a bottom bar
+      ));
   runApp(MyApp());
 }
 
@@ -19,7 +22,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.purple,
         brightness: Brightness.dark,
       ),
-      home: HomePage(),
+      home: SplashPage(),
     );
   }
 }

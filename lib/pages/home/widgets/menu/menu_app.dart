@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app_clone_nubank_ui/pages/home/widgets/item_menu.dart';
+
+import 'file:///E:/Users/Artur/FlutterCloneUI/flutter_app_clone_nubank_ui/lib/pages/home/widgets/menu/item_menu.dart';
 
 class MenuApp extends StatelessWidget {
   final double top;
