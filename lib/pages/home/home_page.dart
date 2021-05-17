@@ -1,8 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app_clone_nubank_ui/pages/home/widgets/menu_app.dart';
 import 'package:flutter_app_clone_nubank_ui/pages/home/widgets/my_app_bar.dart';
 import 'package:flutter_app_clone_nubank_ui/pages/home/widgets/my_dots_app.dart';
 import 'package:flutter_app_clone_nubank_ui/pages/home/widgets/page_view_app.dart';
+
+import 'widgets/bottom_menu.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -35,18 +38,26 @@ class _HomePageState extends State<HomePage> {
         alignment: Alignment.topCenter,
         children: <Widget>[
           MyAppBar(
-              // Send var value to my_app_bar
-              showMenu: _showMenu,
-              onTap: () {
-                setState(() {
-                  _showMenu = !_showMenu;
-                  _yPosition =
-                      _showMenu ? _screenHeight * .75 : _screenHeight + .24;
-                });
-              }),
-          PageViewApp(
+            // Send var value to my_app_bar
             showMenu: _showMenu,
+            onTap: () {
+              setState(() {
+                _showMenu = !_showMenu;
+                _yPosition =
+                    _showMenu ? _screenHeight * .75 : _screenHeight + .24;
+              });
+            },
+          ),
+          MenuApp(
+            top: _screenHeight * .20,
+            showMenu: _showMenu,
+          ),
+          BottomMenu(
+            showMenu: _showMenu,
+          ),
+          PageViewApp(
             //Show menu tap go top bottom, back go to top
+            showMenu: _showMenu,
             top: _yPosition,
             //!_showMenu ? _screenHeight * 0.24 : _screenHeight * 0.75,
             // Send index page changed
@@ -95,6 +106,7 @@ class _HomePageState extends State<HomePage> {
             },
           ),
           MyDotsApp(
+            showMenu: _showMenu,
             top: _screenHeight * .70,
             currentIndex: _currentIndex,
           ),

@@ -1,5 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_app_clone_nubank_ui/pages/home/widgets/card_app.dart';
+import 'package:flutter_app_clone_nubank_ui/pages/home/widgets/first_card.dart';
+import 'package:flutter_app_clone_nubank_ui/pages/home/widgets/second_card.dart';
+import 'package:flutter_app_clone_nubank_ui/pages/home/widgets/third_card.dart';
 
 class PageViewApp extends StatelessWidget {
   final double top;
@@ -15,7 +18,7 @@ class PageViewApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return AnimatedPositioned(
-      duration: Duration(milliseconds: 300),
+      duration: Duration(milliseconds: 250),
       curve: Curves.easeOut,
       top: top,
       height: MediaQuery.of(context).size.height * 0.45,
@@ -35,9 +38,15 @@ class PageViewApp extends StatelessWidget {
               ? NeverScrollableScrollPhysics()
               : BouncingScrollPhysics(),
           children: [
-            CardApp(),
-            CardApp(),
-            CardApp(),
+            CardApp(
+              child: FirstCard(),
+            ),
+            CardApp(
+              child: SecondCard(),
+            ),
+            CardApp(
+              child: ThirdCard(),
+            ),
           ],
         ),
       ),
